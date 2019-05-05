@@ -1,16 +1,12 @@
-> Example of django versatileimagefield with graphql
+### Example of django versatileimagefield with graphql
+- `pip install -r requirements.txt`
+- `python manage.py migrate`
+- `python manage.py createsuperuser`
+- `add some products with images`
+- `python manage.py runserver` 
+- `http://localhost:8000/graphql/`
 
-> `pip install -r requirements.txt`
->
-> `python manage.py migrate`
->
-> `python manage.py createsuperuser` (after add some products with images)
-> 
-> `python manage.py runserver`
-> 
-> `http://localhost:8000/graphql/`
-
-> Request example
+### Request example
 ```query {
   products {
     images {
@@ -21,8 +17,8 @@
   }
 }
 ```
-> Response example
-```
+### Response example
+```json
 {
   "data": {
     "products": [
